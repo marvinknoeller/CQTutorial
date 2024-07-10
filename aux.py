@@ -69,15 +69,6 @@ def createIncWave(points, A = 2, d = np.array([1.0, 0.0, 0.0]), tlag = 2.0, T=5,
         \phi(t-|x|)/(4\pi|x|) (spherical wave in 3d, see p. 78 Banjai/Sayas Book)
     '''
     fn = lambda x: mollifier(A*x)
-    # x, y, z = points
-    # idx = np.sqrt(x**2 + y**2) > 1.0 # we exclude points inside the sphere of course
-    # vals = np.zeros((points.shape[1],M+1))
-    # vals[:] = np.nan
-    # if option == 0:
-    #     vals[idx] = planewave(fn, d, tlag, points[:,idx], T, M)
-    # elif option == 1:
-    #     vals[idx] = sphericalwave(fn, 0, points[:,idx], T, M)
-    # return vals
     if option == 0:
         vals = planewave(fn, d, tlag, points, T, M)
     elif option == 1:
