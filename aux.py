@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jun 24 08:54:43 2024
-
-@author: marvinknoller
-"""
-
 import numpy as np
 import bempp
 from bempp.api.linalg import lu
